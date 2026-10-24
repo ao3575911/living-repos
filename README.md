@@ -35,7 +35,7 @@ python scripts/validate_examples.py
 
 ## Status
 
-v0.2.0: hello demo, example template, pinned to protocol release v0.2.0. Snapshot and restore comes in v0.3 (see the [roadmap](docs/roadmap.md)).
+v0.2.1: hello demo, example template, pinned to protocol release v0.2.1. Snapshot and restore comes in v0.3 (see the [roadmap](docs/roadmap.md)).
 
 ## Related
 
