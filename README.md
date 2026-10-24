@@ -2,6 +2,8 @@
 Code that brings its own cloud agent.
 Examples + demos for per-repo cloud agent runtimes.
 
+Runnable examples of the Living Repositories Protocol, each validated against a pinned protocol release in CI.
+
 [![CI](https://github.com/ao3575911/living-repos/actions/workflows/ci.yml/badge.svg)](https://github.com/ao3575911/living-repos/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/ao3575911/living-repos)](https://github.com/ao3575911/living-repos/releases) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ![Living Repositories](docs/social-preview.png)
@@ -26,6 +28,8 @@ python scripts/validate_examples.py
 ```
 
 ## Docs
+
+- [Strategy](STRATEGY.md): problem, audience, non-goals and alternatives
 
 - [PRD](docs/prd.md), [spec sheet](docs/spec-sheet.md), [architecture](docs/architecture.md)
 - [Build plan](docs/build-plan.md), [roadmap](docs/roadmap.md), [risks](docs/risks.md), [QA strategy](docs/qa-strategy.md)
