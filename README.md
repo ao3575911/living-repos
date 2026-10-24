@@ -31,10 +31,11 @@ python scripts/validate_examples.py
 - [Build plan](docs/build-plan.md), [roadmap](docs/roadmap.md), [risks](docs/risks.md), [QA strategy](docs/qa-strategy.md)
 - [ADR-0001: repo split](docs/decisions/ADR-0001-repo-split.md)
 - [Protocol compatibility](PROTOCOL.md)
+- [Changelog](CHANGELOG.md)
 
 ## Status
 
-v0.1.0: scaffold and example template. Demos come in v0.2 (see the [roadmap](docs/roadmap.md)).
+v0.2.0: hello demo, example template, pinned to protocol release v0.2.0. Snapshot and restore comes in v0.3 (see the [roadmap](docs/roadmap.md)).
 
 ## Related
 
