@@ -59,7 +59,7 @@ Docs site: [https://ao3575911.github.io/living-repos/](https://ao3575911.github.
 
 ## Status
 
-v0.2.1: hello demo, example template, pinned to protocol release v0.2.1. Snapshot and restore comes in v0.3 (see the [roadmap](docs/roadmap.md)).
+v0.3.0: hello and snapshot demos plus the example template, pinned to protocol release v0.3.0. Next: running demos in their declared isolation profile (see the [roadmap](docs/roadmap.md)).
 
 ## Related
 
