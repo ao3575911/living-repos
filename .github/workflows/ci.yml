@@ -19,7 +19,11 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements-ci.txt
       - run: test -f README.md && test -f PROTOCOL.md && test -f docs/prd.md
-      - run: python scripts/validate_examples.py
+      - run: python scripts/validate_examples.py --pin-only
+      - name: Validate example manifests
+        uses: ao3575911/living-repos-protocol@v0.2.0
+        with:
+          manifests: "examples/*/.living/manifest.yaml"
       - name: Smoke-run hello demo
         working-directory: examples/hello
         run: |
