@@ -25,25 +25,22 @@ jobs:
         uses: ao3575911/living-repos-protocol@v0.3.0
         with:
           manifests: "examples/*/.living/manifest.yaml"
-      - name: Smoke-run hello demo
-        working-directory: examples/hello
+      - name: Smoke-run hello demo in its isolation profile
         run: |
-          python bootstrap.py > /tmp/hello.txt
-          diff -u expected-output.txt /tmp/hello.txt
-          test "$(cat .living/state.json)" = '{"last_task": "greet", "status": "ready"}'
+          bash scripts/run_isolated.sh examples/hello > /tmp/hello.txt
+          diff -u examples/hello/expected-output.txt /tmp/hello.txt
+          test "$(cat examples/hello/.living/state.json)" = '{"last_task": "greet", "status": "ready"}'
       - name: Hello demo refuses an unsupported capability
-        working-directory: examples/hello
         run: |
           set +e
-          python bootstrap.py ../../tests/unsupported-capability.yaml > /tmp/refused.txt
+          bash scripts/run_isolated.sh examples/hello /repo/tests/unsupported-capability.yaml > /tmp/refused.txt
           code=$?
           set -e
           cat /tmp/refused.txt
           test "$code" = 1
           test "$(cat /tmp/refused.txt)" = '{"event": "refused", "unsupported": ["handoff"]}'
-      - name: Smoke-run snapshot demo
-        working-directory: examples/snapshot
+      - name: Smoke-run snapshot demo in its isolation profile
         run: |
-          python bootstrap.py > /tmp/snapshot.txt
-          diff -u expected-output.txt /tmp/snapshot.txt
-          test "$(cat work/notes.txt)" = "version 1"
+          bash scripts/run_isolated.sh examples/snapshot > /tmp/snapshot.txt
+          diff -u examples/snapshot/expected-output.txt /tmp/snapshot.txt
+          test "$(cat examples/snapshot/work/notes.txt)" = "version 1"

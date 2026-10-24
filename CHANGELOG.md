@@ -6,6 +6,7 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ### Added
 
+- CI runs each demo in a Docker container that matches its `isolation_profile` (`scripts/run_isolated.sh`; `sandbox-process` has no network, no capabilities and no new privileges) ([#17](https://github.com/ao3575911/living-repos/issues/17)).
 - `scripts/gen_readme.py` fails when a directory under `examples/` has no manifest, so the guide lists every example ([#20](https://github.com/ao3575911/living-repos/issues/20)).
 - CI checks that the hello demo refuses a manifest declaring an unsupported capability ([#18](https://github.com/ao3575911/living-repos/issues/18)). `bootstrap.py` takes an optional manifest path.
 
