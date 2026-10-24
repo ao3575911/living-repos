@@ -1,0 +1,10 @@
+title: Living Repositories
+description: Runnable examples of the Living Repositories Protocol.
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
+exclude:
+  - social-preview.png
