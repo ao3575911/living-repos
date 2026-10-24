@@ -10,6 +10,10 @@ Examples + demos for per-repo cloud agent runtimes.
 
 A showcase of repositories that carry their own cloud agent runtime. Each example declares a `.living/manifest.yaml` that follows the [Living Repositories Protocol](https://github.com/ao3575911/living-repos-protocol). The protocol repo defines the standard; this repo shows implementations.
 
+## Hello demo
+
+[`examples/hello`](examples/hello) is a working example: `cd examples/hello && python bootstrap.py`. CI runs it on every change.
+
 ## Quickstart
 
 ```sh
