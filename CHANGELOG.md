@@ -4,11 +4,17 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-10-25
+
 ### Added
 
 - CI runs each demo in a Docker container that matches its `isolation_profile` (`scripts/run_isolated.sh`; `sandbox-process` has no network, no capabilities and no new privileges) ([#17](https://github.com/ao3575911/living-repos/issues/17)).
 - `scripts/gen_readme.py` fails when a directory under `examples/` has no manifest, so the guide lists every example ([#20](https://github.com/ao3575911/living-repos/issues/20)).
 - CI checks that the hello demo refuses a manifest declaring an unsupported capability ([#18](https://github.com/ao3575911/living-repos/issues/18)). `bootstrap.py` takes an optional manifest path.
+
+### Changed
+
+- Pinned to protocol release v0.4.0 (`PROTOCOL_VERSION`, `PROTOCOL.md`, the CI action ref and the guide snippet). All examples still validate.
 
 ### Fixed
 
@@ -61,7 +67,8 @@ Pinned to [living-repos-protocol v0.2.0](https://github.com/ao3575911/living-rep
 - CI job `test`: Markdown lint and validation of every example manifest against the protocol schema.
 - Licence, contributing guide, security policy, code of conduct, issue and PR templates.
 
-[Unreleased]: https://github.com/ao3575911/living-repos/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/ao3575911/living-repos/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/ao3575911/living-repos/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/ao3575911/living-repos/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/ao3575911/living-repos/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/ao3575911/living-repos/compare/v0.1.0...v0.2.0

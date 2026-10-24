@@ -1,5 +1,5 @@
 # Roadmap
-v0.1 scaffold, v0.2 demos, v0.3 conformance, v1.0 launch.
+v0.1 scaffold, v0.2 demos, v0.3 snapshot demo and tooling, v0.4 conformance, v1.0 launch.
 
 ## v0.1: scaffold (shipped)
 
@@ -17,10 +17,12 @@ Docs, example template and CI. [Release](https://github.com/ao3575911/living-rep
 - Snapshot and restore demo: [examples/snapshot](https://github.com/ao3575911/living-repos/tree/main/examples/snapshot).
 - Generated README and guide tables, docs site, labels, issue forms, AGENTS.md.
 
-## v0.4: conformance
+## v0.4: conformance (shipped)
 
-- Run demos inside their declared isolation profile in CI ([#17](https://github.com/ao3575911/living-repos/issues/17)).
-- Bootstrap negative tests ([#18](https://github.com/ao3575911/living-repos/issues/18)).
+- Demos run in CI inside their declared isolation profile ([#17](https://github.com/ao3575911/living-repos/issues/17)).
+- Negative test: the hello bootstrap refuses an unsupported capability ([#18](https://github.com/ao3575911/living-repos/issues/18)).
+- CI fails if an example is missing from the guide ([#20](https://github.com/ao3575911/living-repos/issues/20)).
+- Pinned to protocol v0.4.0 (runtime capability document, `read_secrets`).
 
 ## v1.0: launch
 
