@@ -4,6 +4,10 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ## [Unreleased]
 
+### Added
+
+- CI checks that the hello demo refuses a manifest declaring an unsupported capability ([#18](https://github.com/ao3575911/living-repos/issues/18)). `bootstrap.py` takes an optional manifest path.
+
 ## [0.3.0] - 2026-10-25
 
 Pinned to [living-repos-protocol v0.3.0](https://github.com/ao3575911/living-repos-protocol/releases/tag/v0.3.0).

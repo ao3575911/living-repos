@@ -31,6 +31,16 @@ jobs:
           python bootstrap.py > /tmp/hello.txt
           diff -u expected-output.txt /tmp/hello.txt
           test "$(cat .living/state.json)" = '{"last_task": "greet", "status": "ready"}'
+      - name: Hello demo refuses an unsupported capability
+        working-directory: examples/hello
+        run: |
+          set +e
+          python bootstrap.py ../../tests/unsupported-capability.yaml > /tmp/refused.txt
+          code=$?
+          set -e
+          cat /tmp/refused.txt
+          test "$code" = 1
+          test "$(cat /tmp/refused.txt)" = '{"event": "refused", "unsupported": ["handoff"]}'
       - name: Smoke-run snapshot demo
         working-directory: examples/snapshot
         run: |

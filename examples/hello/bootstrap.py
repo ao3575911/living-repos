@@ -1,6 +1,7 @@
 """Hello demo: read the manifest, run one task, publish state to a file.
 
-Run from this directory: python bootstrap.py
+Run from this directory: python bootstrap.py [MANIFEST]
+MANIFEST defaults to .living/manifest.yaml.
 Requires PyYAML.
 """
 import json, pathlib, sys
@@ -14,7 +15,8 @@ def log(event, **fields):
     print(json.dumps({"event": event, **fields}, sort_keys=True))
 
 
-manifest = yaml.safe_load((HERE / ".living/manifest.yaml").read_text())
+manifest_path = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else HERE / ".living/manifest.yaml"
+manifest = yaml.safe_load(manifest_path.read_text())
 unsupported = set(manifest["agent_capabilities"]) - SUPPORTED
 if unsupported:
     log("refused", unsupported=sorted(unsupported))

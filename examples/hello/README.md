@@ -25,4 +25,8 @@ It also writes `.living/state.json`:
 {"last_task": "greet", "status": "ready"}
 ```
 
-CI runs the script and compares its output with [`expected-output.txt`](expected-output.txt).
+CI runs the script and compares its output with [`expected-output.txt`](expected-output.txt). CI also runs it against [`tests/unsupported-capability.yaml`](../../tests/unsupported-capability.yaml), which declares `handoff`, and checks that it exits 1 after logging:
+
+```text
+{"event": "refused", "unsupported": ["handoff"]}
+```
