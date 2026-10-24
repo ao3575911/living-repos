@@ -18,6 +18,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements-ci.txt
+      - run: python scripts/gen_readme.py --check
       - run: test -f README.md && test -f PROTOCOL.md && test -f docs/prd.md
       - run: python scripts/validate_examples.py --pin-only
       - name: Validate example manifests
