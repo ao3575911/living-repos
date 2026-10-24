@@ -6,7 +6,7 @@ Runnable examples of the Living Repositories Protocol, each validated against a 
 
 <!-- BEGIN GENERATED: badges -->
 
-[![CI](https://github.com/ao3575911/living-repos/actions/workflows/ci.yml/badge.svg)](https://github.com/ao3575911/living-repos/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/ao3575911/living-repos)](https://github.com/ao3575911/living-repos/releases) [![Protocol](https://img.shields.io/badge/protocol-v0.3.0-blue)](https://github.com/ao3575911/living-repos-protocol/releases/tag/v0.3.0) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/ao3575911/living-repos/actions/workflows/ci.yml/badge.svg)](https://github.com/ao3575911/living-repos/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/ao3575911/living-repos)](https://github.com/ao3575911/living-repos/releases) [![Protocol](https://img.shields.io/badge/protocol-v0.4.0-blue)](https://github.com/ao3575911/living-repos-protocol/releases/tag/v0.4.0) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 <!-- END GENERATED: badges -->
 
@@ -59,7 +59,7 @@ Docs site: [https://ao3575911.github.io/living-repos/](https://ao3575911.github.
 
 ## Status
 
-v0.3.0: hello and snapshot demos plus the example template, pinned to protocol release v0.3.0. Next: running demos in their declared isolation profile (see the [roadmap](docs/roadmap.md)).
+v0.4.0: hello and snapshot demos plus the example template, pinned to protocol release v0.4.0. CI runs each demo in its declared isolation profile and checks that an unsupported capability is refused. Next: the handoff demo (see the [roadmap](docs/roadmap.md)).
 
 ## Related
 

@@ -27,7 +27,7 @@ jobs:
       - run: test -f README.md && test -f PROTOCOL.md && test -f docs/prd.md
       - run: python scripts/validate_examples.py --pin-only
       - name: Validate example manifests
-        uses: ao3575911/living-repos-protocol@v0.3.0
+        uses: ao3575911/living-repos-protocol@v0.4.0
         with:
           manifests: "examples/*/.living/manifest.yaml"
       - name: Smoke-run hello demo in its isolation profile
