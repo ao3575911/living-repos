@@ -18,7 +18,7 @@ A showcase of repositories that carry their own cloud agent runtime. Each exampl
 
 ## Hello demo
 
-[`examples/hello`](examples/hello) is a working example: `cd examples/hello && python bootstrap.py`. CI runs it on every change.
+[`examples/hello`](examples/hello) is a working example: `cd examples/hello && python bootstrap.py`. CI runs it on every change, inside a container that matches its `isolation_profile` (`bash scripts/run_isolated.sh examples/hello`, needs Docker).
 
 ## Examples
 

@@ -5,7 +5,7 @@ Protocol repo defines standards; this repo demonstrates implementations.
 
 - **Manifest** (`examples/<name>/.living/manifest.yaml`): declares the agent's capabilities, isolation, state target and logging. Format defined by [living-repos-protocol](https://github.com/ao3575911/living-repos-protocol/blob/main/docs/spec.md).
 - **Bootstrap** (for example `examples/hello/bootstrap.py`): reads the manifest, refuses unsupported capabilities, runs tasks and publishes state.
-- **Pin** ([`PROTOCOL_VERSION`](../PROTOCOL_VERSION)): the protocol release every example is validated against.
+- **Pin** ([`PROTOCOL_VERSION`](https://github.com/ao3575911/living-repos/blob/main/PROTOCOL_VERSION)): the protocol release every example is validated against.
 - **CI**: lints Markdown, validates every manifest against the pinned schema and smoke-runs each demo against its expected output.
 
 ## Flow
