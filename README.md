@@ -1,8 +1,6 @@
 # Living Repositories
-Code that brings its own cloud agent.
-Examples + demos for per-repo cloud agent runtimes.
 
-Runnable examples of the Living Repositories Protocol, each validated against a pinned protocol release in CI.
+Code that brings its own cloud agent. Runnable examples of the [Living Repositories Protocol](https://github.com/ao3575911/living-repos-protocol), each validated against a pinned protocol release in CI.
 
 <!-- BEGIN GENERATED: badges -->
 
@@ -14,7 +12,17 @@ Runnable examples of the Living Repositories Protocol, each validated against a 
 
 ## What it is
 
-A showcase of repositories that carry their own cloud agent runtime. Each example declares a `.living/manifest.yaml` that follows the [Living Repositories Protocol](https://github.com/ao3575911/living-repos-protocol). The protocol repo defines the standard; this repo shows implementations.
+Each example is a directory with a `.living/manifest.yaml` that declares the agent's capabilities, isolation profile and state target. The protocol repo defines the format; this repo shows it working.
+
+```text
+examples/<name>/.living/manifest.yaml
+        │  validate_examples.py (schema from the pinned protocol tag, PROTOCOL_VERSION)
+        ▼
+run_isolated.sh ──► Docker container matching isolation_profile
+        │
+        ▼
+bootstrap.py runs tasks, writes state ──► CI compares against expected-output.txt
+```
 
 ## Hello demo
 
