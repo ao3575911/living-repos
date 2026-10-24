@@ -1,7 +1,7 @@
 """Regenerate the README sections between BEGIN/END GENERATED markers.
 
 Sources: examples/*/.living/manifest.yaml (examples table) and
-PROTOCOL_VERSION (badges). Run with --check to fail if README.md is out of date.
+PROTOCOL_VERSION (badges). Also renders the same markers in docs/index.md. Run with --check to fail on drift.
 """
 import pathlib, re, sys
 import yaml
@@ -24,7 +24,7 @@ def examples():
     for m in sorted(ROOT.glob("examples/*/.living/manifest.yaml")):
         d = yaml.safe_load(m.read_text())
         name = m.parent.parent.name
-        rows.append(f"| [`{name}`](examples/{name}) | {', '.join(d['agent_capabilities'])} | "
+        rows.append(f"| [`{name}`](https://github.com/{REPO}/tree/main/examples/{name}) | {', '.join(d['agent_capabilities'])} | "
                     f"{d['isolation_profile']} | {d['state_publication']['target']} |")
     rows.append("")
     rows.append("Generated from each example's manifest by `scripts/gen_readme.py`.")
@@ -41,12 +41,18 @@ def render(text):
     return text
 
 
-readme = ROOT / "README.md"
-current = readme.read_text()
-new = render(current)
-if "--check" in sys.argv:
-    if new != current:
-        sys.exit("README.md is out of date. Run: python scripts/gen_readme.py")
-    print("ok README.md up to date")
-else:
-    readme.write_text(new)
+TARGETS = ["README.md", "docs/index.md"]
+stale = []
+for name in TARGETS:
+    path = ROOT / name
+    current = path.read_text()
+    new = render(current)
+    if new == current:
+        continue
+    if "--check" in sys.argv:
+        stale.append(name)
+    else:
+        path.write_text(new)
+if stale:
+    sys.exit(f"Out of date: {', '.join(stale)}. Run: python scripts/gen_readme.py")
+print("ok generated sections up to date")

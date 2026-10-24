@@ -23,8 +23,8 @@ A showcase of repositories that carry their own cloud agent runtime. Each exampl
 <!-- BEGIN GENERATED: examples -->
 | Example | Capabilities | Isolation | State target |
 | --- | --- | --- | --- |
-| [`_template`](examples/_template) | run_tasks, publish_state | dedicated-vm | control-process |
-| [`hello`](examples/hello) | run_tasks, publish_state | sandbox-process | file |
+| [`_template`](https://github.com/ao3575911/living-repos/tree/main/examples/_template) | run_tasks, publish_state | dedicated-vm | control-process |
+| [`hello`](https://github.com/ao3575911/living-repos/tree/main/examples/hello) | run_tasks, publish_state | sandbox-process | file |
 
 Generated from each example's manifest by `scripts/gen_readme.py`.
 <!-- END GENERATED: examples -->
@@ -41,6 +41,8 @@ python scripts/validate_examples.py
 ```
 
 ## Docs
+
+Docs site: [https://ao3575911.github.io/living-repos/](https://ao3575911.github.io/living-repos/)
 
 - [Strategy](STRATEGY.md): problem, audience, non-goals and alternatives
 
