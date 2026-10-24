@@ -5,12 +5,14 @@ Runnable examples of the [Living Repositories Protocol](https://ao3575911.github
 ## Examples
 
 <!-- BEGIN GENERATED: examples -->
+
 | Example | Capabilities | Isolation | State target |
 | --- | --- | --- | --- |
 | [`_template`](https://github.com/ao3575911/living-repos/tree/main/examples/_template) | run_tasks, publish_state | dedicated-vm | control-process |
 | [`hello`](https://github.com/ao3575911/living-repos/tree/main/examples/hello) | run_tasks, publish_state | sandbox-process | file |
 
 Generated from each example's manifest by `scripts/gen_readme.py`.
+
 <!-- END GENERATED: examples -->
 
 ## Add a manifest to your repository
