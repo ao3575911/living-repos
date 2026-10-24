@@ -4,6 +4,21 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-25
+
+Pinned to [living-repos-protocol v0.3.0](https://github.com/ao3575911/living-repos-protocol/releases/tag/v0.3.0).
+
+### Added
+- Snapshot and restore demo in `examples/snapshot`, using the `snapshot` field from protocol v0.3.0. CI smoke-runs it and checks the restored file.
+- `scripts/gen_readme.py` generates README badges (including the protocol pin), the examples table and the guide's examples table from source. CI fails on drift.
+- GitHub Pages guide: <https://ao3575911.github.io/living-repos/>.
+- STRATEGY.md and AGENTS.md.
+- Labels as code with a sync workflow, a Spec change (RFC) issue form, and a manually triggered Release Please workflow that proposes the next version without tagging.
+
+### Changed
+- Protocol pin moved from v0.2.1 to v0.3.0 in `PROTOCOL_VERSION`, `PROTOCOL.md`, the CI action ref and the guide.
+- Copilot review instructions point at AGENTS.md and list the changes to block.
+
 ## [0.2.1] - 2026-10-25
 
 Pinned to [living-repos-protocol v0.2.1](https://github.com/ao3575911/living-repos-protocol/releases/tag/v0.2.1).
@@ -35,7 +50,8 @@ Pinned to [living-repos-protocol v0.2.0](https://github.com/ao3575911/living-rep
 - CI job `test`: Markdown lint and validation of every example manifest against the protocol schema.
 - Licence, contributing guide, security policy, code of conduct, issue and PR templates.
 
-[Unreleased]: https://github.com/ao3575911/living-repos/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/ao3575911/living-repos/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/ao3575911/living-repos/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/ao3575911/living-repos/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/ao3575911/living-repos/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/ao3575911/living-repos/releases/tag/v0.1.0
