@@ -24,5 +24,5 @@ Protocol repo defines standards; this repo demonstrates implementations.
 
 ## Open questions
 
-- Whether demos should run inside the isolation profile they declare (container, VM) in CI.
+- How to run `dedicated-vm` demos in CI. `container` and `sandbox-process` demos run in Docker through `scripts/run_isolated.sh`.
 - How to show handoff between two runtimes in a single repository.

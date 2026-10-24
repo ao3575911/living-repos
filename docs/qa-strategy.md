@@ -10,7 +10,7 @@ Static checks, smoke tests, protocol compatibility checks.
 | Required files | Missing `README.md`, `PROTOCOL.md` or `docs/prd.md`. |
 | Protocol pin | `PROTOCOL.md` or the action ref in `ci.yml` naming a different release than `PROTOCOL_VERSION`. |
 | Manifest validation | Any `examples/*/.living/manifest.yaml` invalid against the pinned schema. |
-| Demo smoke tests | `examples/hello/bootstrap.py` or `examples/snapshot/bootstrap.py` output differing from its `expected-output.txt`, a wrong state file, or a snapshot not restored. |
+| Demo smoke tests | Run through `scripts/run_isolated.sh` in the isolation the manifest declares (`sandbox-process`: Docker container with no network, no Linux capabilities and no new privileges; `container`: Docker container). Fails on `examples/hello/bootstrap.py` or `examples/snapshot/bootstrap.py` output differing from its `expected-output.txt`, a wrong state file, or a snapshot not restored. |
 | Unsupported capability | `examples/hello/bootstrap.py` run against `tests/unsupported-capability.yaml` (declares `handoff`) not exiting 1 with exactly one `refused` log line. |
 
 The ruleset requires `test` to pass before any merge to `main`.
@@ -21,4 +21,4 @@ An example is a directory under `examples/` with a `.living/manifest.yaml`; `pyt
 
 ## Not covered yet
 
-- Running demos inside their declared isolation profile.
+- `dedicated-vm` examples: `scripts/run_isolated.sh` refuses them, and no example uses that profile.
