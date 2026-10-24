@@ -21,4 +21,6 @@ An example is a directory under `examples/` with a `.living/manifest.yaml`; `pyt
 
 ## Not covered yet
 
+- The `container` branch of `scripts/run_isolated.sh`: no example declares `container` yet, so CI exercises only `sandbox-process`.
+- The container image is pinned by digest in `scripts/run_isolated.sh`; Dependabot does not track it, so it is updated by hand.
 - `dedicated-vm` examples: `scripts/run_isolated.sh` refuses them, and no example uses that profile.

@@ -7,14 +7,14 @@ Docs, example template and CI. [Release](https://github.com/ao3575911/living-rep
 
 ## v0.2: first demo and protocol tooling (shipped)
 
-- Working hello demo with a CI smoke test: [examples/hello](../examples/hello).
-- Single protocol pin in [`PROTOCOL_VERSION`](../PROTOCOL_VERSION).
+- Working hello demo with a CI smoke test: [examples/hello](https://github.com/ao3575911/living-repos/tree/main/examples/hello).
+- Single protocol pin in [`PROTOCOL_VERSION`](https://github.com/ao3575911/living-repos/blob/main/PROTOCOL_VERSION).
 - Validation through the published protocol action, pinned to protocol v0.2.0.
 - Completed architecture, QA and roadmap docs.
 
 ## v0.3: snapshot demo and project tooling (shipped)
 
-- Snapshot and restore demo: [examples/snapshot](../examples/snapshot).
+- Snapshot and restore demo: [examples/snapshot](https://github.com/ao3575911/living-repos/tree/main/examples/snapshot).
 - Generated README and guide tables, docs site, labels, issue forms, AGENTS.md.
 
 ## v0.4: conformance
