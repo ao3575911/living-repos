@@ -4,7 +4,9 @@ Examples + demos for per-repo cloud agent runtimes.
 
 Runnable examples of the Living Repositories Protocol, each validated against a pinned protocol release in CI.
 
-[![CI](https://github.com/ao3575911/living-repos/actions/workflows/ci.yml/badge.svg)](https://github.com/ao3575911/living-repos/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/ao3575911/living-repos)](https://github.com/ao3575911/living-repos/releases) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+<!-- BEGIN GENERATED: badges -->
+[![CI](https://github.com/ao3575911/living-repos/actions/workflows/ci.yml/badge.svg)](https://github.com/ao3575911/living-repos/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/ao3575911/living-repos)](https://github.com/ao3575911/living-repos/releases) [![Protocol](https://img.shields.io/badge/protocol-v0.2.1-blue)](https://github.com/ao3575911/living-repos-protocol/releases/tag/v0.2.1) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+<!-- END GENERATED: badges -->
 
 ![Living Repositories](docs/social-preview.png)
 
@@ -15,6 +17,17 @@ A showcase of repositories that carry their own cloud agent runtime. Each exampl
 ## Hello demo
 
 [`examples/hello`](examples/hello) is a working example: `cd examples/hello && python bootstrap.py`. CI runs it on every change.
+
+## Examples
+
+<!-- BEGIN GENERATED: examples -->
+| Example | Capabilities | Isolation | State target |
+| --- | --- | --- | --- |
+| [`_template`](examples/_template) | run_tasks, publish_state | dedicated-vm | control-process |
+| [`hello`](examples/hello) | run_tasks, publish_state | sandbox-process | file |
+
+Generated from each example's manifest by `scripts/gen_readme.py`.
+<!-- END GENERATED: examples -->
 
 ## Quickstart
 
