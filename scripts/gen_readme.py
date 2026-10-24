@@ -2,6 +2,8 @@
 
 Sources: examples/*/.living/manifest.yaml (examples table) and
 PROTOCOL_VERSION (badges). Also renders the same markers in docs/index.md. Run with --check to fail on drift.
+Fails if a directory under examples/ has no .living/manifest.yaml, so every
+example appears in the README and the guide.
 """
 import pathlib, re, sys
 import yaml
@@ -40,6 +42,11 @@ def render(text):
                       lambda m: m.group(1) + "\n" + fn() + "\n" + m.group(2), text, flags=re.S)
     return text
 
+
+missing = [d.name for d in sorted((ROOT / "examples").iterdir())
+           if d.is_dir() and not (d / ".living" / "manifest.yaml").is_file()]
+if missing:
+    sys.exit(f"Examples without .living/manifest.yaml: {', '.join(missing)}")
 
 TARGETS = ["README.md", "docs/index.md"]
 stale = []

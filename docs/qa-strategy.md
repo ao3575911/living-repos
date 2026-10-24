@@ -6,6 +6,7 @@ Static checks, smoke tests, protocol compatibility checks.
 | Check | What fails it |
 | --- | --- |
 | markdownlint | Any Markdown rule violation outside the disabled set in `.markdownlint.yaml`. |
+| Generated sections | `README.md` or `docs/index.md` out of date with `scripts/gen_readme.py`, or a directory under `examples/` without `.living/manifest.yaml` (so every example is listed in the guide). |
 | Required files | Missing `README.md`, `PROTOCOL.md` or `docs/prd.md`. |
 | Protocol pin | `PROTOCOL.md` or the action ref in `ci.yml` naming a different release than `PROTOCOL_VERSION`. |
 | Manifest validation | Any `examples/*/.living/manifest.yaml` invalid against the pinned schema. |
@@ -16,7 +17,7 @@ The ruleset requires `test` to pass before any merge to `main`.
 
 ## Adding an example
 
-An example is done when its manifest validates, its README lists exact commands and expected output, and CI runs it.
+An example is a directory under `examples/` with a `.living/manifest.yaml`; `python scripts/gen_readme.py` adds it to the README and the guide. It is done when its manifest validates, its README lists exact commands and expected output, and CI runs it.
 
 ## Not covered yet
 
