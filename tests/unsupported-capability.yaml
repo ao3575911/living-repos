@@ -1,0 +1,7 @@
+# Valid manifest that declares handoff, which examples/hello/bootstrap.py does not support.
+protocol_version: v0.1.0-draft
+project_id: hello
+agent_capabilities: [run_tasks, handoff]
+isolation_profile: sandbox-process
+state_publication: { target: file, path: .living/state.json }
+logging_requirements: { structured: true }
