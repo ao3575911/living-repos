@@ -5,3 +5,5 @@ __pycache__/
 node_modules/
 .env
 examples/*/.living/state.json
+examples/*/work/
+examples/*/.living/snapshots/
