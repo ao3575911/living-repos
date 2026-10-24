@@ -28,6 +28,7 @@ A showcase of repositories that carry their own cloud agent runtime. Each exampl
 | --- | --- | --- | --- |
 | [`_template`](https://github.com/ao3575911/living-repos/tree/main/examples/_template) | run_tasks, publish_state | dedicated-vm | control-process |
 | [`hello`](https://github.com/ao3575911/living-repos/tree/main/examples/hello) | run_tasks, publish_state | sandbox-process | file |
+| [`snapshot`](https://github.com/ao3575911/living-repos/tree/main/examples/snapshot) | run_tasks, snapshot_restore | sandbox-process | control-process |
 
 Generated from each example's manifest by `scripts/gen_readme.py`.
 

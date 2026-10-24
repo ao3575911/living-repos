@@ -13,6 +13,7 @@ pip install -r requirements-ci.txt
 ```sh
 python scripts/validate_examples.py                       # pin consistency + manifests vs pinned schema
 (cd examples/hello && python bootstrap.py | diff -u expected-output.txt -)
+(cd examples/snapshot && python bootstrap.py | diff -u expected-output.txt -)
 npx markdownlint-cli2 "**/*.md"
 ```
 

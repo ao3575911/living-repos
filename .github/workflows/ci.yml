@@ -31,3 +31,9 @@ jobs:
           python bootstrap.py > /tmp/hello.txt
           diff -u expected-output.txt /tmp/hello.txt
           test "$(cat .living/state.json)" = '{"last_task": "greet", "status": "ready"}'
+      - name: Smoke-run snapshot demo
+        working-directory: examples/snapshot
+        run: |
+          python bootstrap.py > /tmp/snapshot.txt
+          diff -u expected-output.txt /tmp/snapshot.txt
+          test "$(cat work/notes.txt)" = "version 1"

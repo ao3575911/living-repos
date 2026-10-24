@@ -1,0 +1,6 @@
+{"event": "start", "project_id": "snapshot", "retention_days": 3, "snapshot_paths": ["work/"]}
+{"content": "version 1", "event": "task", "name": "write"}
+{"event": "snapshot", "id": "1", "paths": ["work/"]}
+{"content": "version 2", "event": "task", "name": "overwrite"}
+{"content": "version 1", "event": "restore", "id": "1"}
+{"event": "done"}
